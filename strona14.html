@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Podstawy Składni Pythona: Zmienne, Przypisanie i Operatory</h2>
+      </div>
+      
+      <p>
+        <pre>
+        Zmienna – możemy sobie wyobrazić ją jako miejsce (np.: kontener), w którym przechowywana jest jakaś wartość. 
+        Aby utworzyć zmienną potrzebujemy: nazwę zmiennej, operator przypisania oraz wartość. W języku Python możemy korzystać z następujących typów zmiennych:
+        <i>int</i> — typ całkowity; liczby rzeczywiste
+        <i>float</i> — typ rzeczywisty; liczby zmiennoprzecinkowe
+        <i>bool</i> — typ logiczny; przechowuje wartość True, False
+        <i>complex</i> — typ dla liczb zespolonych; Przechowuje liczby zespolone w formacie część_rzeczywista + część_urojona
+        <i>str</i> — ciągi znaków
+
+          Stwórzmy pierwszą zmienną, nazwijmy ją a oraz nadajmy jej wartość 5:
+          
+          a = 5
+
+          Gdy w interpreter wpiszemy a oraz klikniemy klawisz Enter, otrzymamy wartość przypisaną do zmiennej:
+          >>> a
+              5
+          Utwórzmy drugą zmienną b, nadajmy jej wartość 7
+          b = 7
+          I sprawdźmy wartości obu zmiennych, aby to zrobić, oddzielamy nazwy zmiennych przy pomocy średnika
+         >>> a;b
+             5
+             7
+          Gdy tworzymy nazwy zmiennych musimy pamiętać o:
+
+          - rozpoczęciu literą lub znakiem podkreślenia
+          - kontynuujemy cyfrą, literą lub znakiem podkreślenia
+          - długość nazw jest nieograniczona
+          - wielkość liter ma znaczenie
+          - w języku Python występują słowa kluczowe, nazwy zmiennych nie mogą być takie same, jak one:
+          False	  await	    else	    import	  Pass
+          none	  break	    except	  in	      raise
+          True	  class	    finally	  is	      return
+          and	    continue	for	      lambda	  try
+          as	    def	      from	    nonlocal	while
+          assert	del	      global	  not	      with
+          async	  elif	    if	      or	      yield
+
+
+          Oprócz tego dobrymi praktykami przy tworzeniu nazw zmiennych są:
+          - stosowanie nazw, które jasno nawiązują do zawartości np.: nazwisko, numer_domu
+          - nie stosujemy polskich znaków
+          - przyjęty w firmie lub zespole styl tworzenia nazw
+
+          W języku Python oprócz poznanego już operatora przypisania „=” korzystamy z innych operatorów, które dzielimy na kilka grup:
+          - arytmetyczne
+          - logiczne
+          - relacyjne
+          - przypisania
+          - identycznościowe
+          - przynależności
+          - bitowe
+          Do wykonywania działań na liczbach korzystamy z operatorów arytmetycznych:
+          + – dodawanie	 - – odejmowanie	* – mnożenie	/ – dzielenie
+          &gt;&gt;&gt;a = 5         &gt;&gt;&gt;a = 5          &gt;&gt;&gt;a = 5         &gt;&gt;&gt;a = 5
+          &gt;&gt;&gt;b = 8         &gt;&gt;&gt;b = 8          &gt;&gt;&gt;b = 8         &gt;&gt;&gt;b = 8
+          &gt;&gt;&gt;c = a + b     &gt;&gt;&gt;c = a - b      &gt;&gt;&gt;c = a * b     &gt;&gt;&gt;c = a / b 
+          &gt;&gt;&gt;c             &gt;&gt;&gt;c              &gt;&gt;&gt;c             &gt;&gt;&gt;c
+          13                        -3           40                     0.625
+          // – dzielenie całkowite	 % – reszta z dzielenia dwóch liczb całkowitych  ** – potęgowanie
+          &gt;&gt;&gt;a = 5                    &gt;&gt;&gt;a = 5                          &gt;&gt;&gt;a = 5
+          &gt;&gt;&gt;b = 8                    &gt;&gt;&gt;b = 8                          &gt;&gt;&gt;b = 8
+          &gt;&gt;&gt;c = a // b               &gt;&gt;&gt;c = a % b                      &gt;&gt;&gt;c = a ** b
+          &gt;&gt;&gt;c                        &gt;&gt;&gt;c                              &gt;&gt;&gt;c
+          0                               5                              390625
+          Operatory logiczne znajdziemy głównie w pętlach oraz instrukcjach warunkowych
+          - or – lub logiczne – zwraca prawdę, gdy przynajmniej jeden z warunków jest prawdziwy, w przeciwnym razie zwraca fałsz
+          - and – i logiczne – zwraca prawdę, gry wszystkie warunki są prawdziwe, w przeciwnym razie zwraca fałsz
+          - not – zaprzeczenie – zaprzecza zwracaną wartość z True na False oraz z False na True
+          Operatory relacyjne stosujemy, przy porównywaniu dwóch elementów, najczęściej w instrukcjach warunkowych i iteracyjnych:
+          "<" - mniejszy	">" - większy	"<=" - mniejszy równy
+          ">=" - większy równy	"==" - równy	"!=" - nie równy
+
+           
+          <B>Operatory przypisania</B>, które nadają wartości dla zmiennej znajdującej się po lewej stronie, wartości znajdującej się po stronie prawej. Oprócz operatora „=” mamy również możliwość przypisania z wykonaniem operacji matematycznej:
+
+          a = 3	                  a += 10	   
+          Zmienna a o wartości 3       	Zwiększamy wartość zmiennej a (3) o 10   
+          &gt;&gt;&gt;a = 3             &gt;&gt;&gt;a += 10             
+          &gt;&gt;&gt;a                 &gt;&gt;&gt;a
+            3                                     13
+          a -= 4	                                a **= 2	                              a //= 3
+     	  Zmniejszamy wartość zmiennej a (13) o 4	Potęgujemy wartość zmiennej a (9) do 2	Dzielimy całkowicie wartość zmiennej a (81) przez 3
+         &gt;&gt;&gt;a -= 4                     &gt;&gt;&gt;a ** 9                       &gt;&gt;&gt;a //= 3
+         &gt;&gt;&gt;a                          &gt;&gt;&gt;a                            &gt;&gt;&gt;a
+            9                                     81                             27       
+                
+          <B>Operatory identycznościowe</B> określają, czy dwie zmienne przechowują ten sam obiekt. Możemy również sprawdzić czy dany obiekt jest oczekiwanym typem np.: int, str
+          - is – czy x jest y
+          - is not – czy x nie jest y
+          Operatory przynależności sprawdzają, czy dany element zawiera się w podzbiorze wartości danego obiektu.
+          - in
+          - not in
+          W dowolnej chwili możemy zmienić wartość zmiennej: 
+          &gt;&gt;&gt;a = 3
+          &gt;&gt;&gt;a
+                      3
+          
+          Lub podstawić wartość innej zmiennej:
+          &gt;&gt;&gt;a = b
+          &gt;&gt;&gt;a;b
+                      7
+                      7
+          Wartością zmiennej może być również wyrażenie: 
+          &gt;&gt;&gt;c = 5+9*(7+3)
+          &gt;&gt;&gt;c
+                      95
+          Aby usunąć zmienną wystarczy wpisać: 
+          &gt;&gt;&gt;del a
+          &gt;&gt;&gt;a
+                      Traceback (most recent call last):
+                      NameError: name 'a' is not defined.
+          Po sprawdzeniu, dostajemy komunikat, że zmienna a nie jest zdefiniowana.
+        
+        </pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Funkcje w Pythonie: Definicje i Wywołania</h2>
+      </div>
+      
+      <p>
+        <pre>
+          W Pythonie mamy możliwość tworzenia własnych funkcji, dzięki temu program jest bardziej przejrzysty, ponieważ wielokrotnie wykonywane operacje możemy zapisać krócej.
+          Definicja funkcji musi zawierać:
+          - nagłówek – nazwę naszej funkcji oraz listę argumentów jakie przyjmuje
+          - ciało funkcji – instrukcje, które wykonają się po wywołaniu (użyciu) naszej funkcji
+
+          def linia():
+              print('-'*10)
+
+
+              linia()
+              ----------
+              Nasza funkcja o nazwie linia() zawiera instrukcję, która wypisuje użytkownikowi 10 razy znak ‘-‘. 
+              Po wywołaniu funkcji ukazuje się nam wynik naszej instrukcji.
+              Możemy użyć tej samej nazwy do zdefiniowania funkcji kilkukrotnie, jednak wykona się tylko ostatnia zdefiniowana funkcją pod tą nazwą.
+              
+              Częstym zabiegiem jest tworzenie funkcji, które zwracają nam rezultat, a to, co się stanie z rezultatem zależy od tego jak wywołamy funkcję. 
+              Dzięki temu jedna funkcja może być użyta w różnych celach. Zróbmy funkcję, która zwraca wynik dodawania:
+
+              def dodaj(a, b):
+                  wynik = a + b
+                  return wynik
+
+              Wywołanie takiej funkcji na różne sposoby:
+                  print(dodaj(3,5))
+                  8
+              Rezultat dodawania 3 i 5
+
+                  suma = dodaj(7,3)
+                  print(suma)
+                  10
+
+              Zmienna suma wypisuje rezultat dodawania parametrów 7 i 3
+              Musimy pamiętać o kolejności parametrów w funkcji podczas wywołania!
+            </pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

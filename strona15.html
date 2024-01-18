@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Struktury Kontrolne w Pythonie: Warunki i Pętle</h2>
+        <pre>
+  Warunki – kiedy chcemy by program porównał zmienne i zależnie od ich wartości działał w inny sposób korzystamy z instrukcji if. Do tego potrzebujemy:
+- dwa wyrażenia (dwie zmienne lub zmienna i stała), które chcemy porównać
+- odpowiedniego operatora porównania, który określa co sprawdzamy
+- dwukropka na końcu linii, który oznacza, że poniżej znajduje się blok kodu, który wykona się tylko wtedy, gdy to, co napisano przed nim jest prawdą
+- blok kodu, który jest przesunięty w prawo (Tabulator) wobec linii zawierającej instrukcję if.
+ 
+Gdy chcemy, aby inny wynik porównania również zwracał nam wartość korzystamy z instrukcji else (inaczej).
+ 	  
+
+Przy bardziej skomplikowanych warunkach korzystamy z operatorów logicznych:
+- negacji (not), np. not x == 5 (nieprawda, że x to 5)
+- alternatywy (or), np. x == 5 or y == 6 (x to 5 lub y to 6)
+- koniunkcji (and), np. x == 5 and y == 6 (x to 5 a y to 6) 
+
+Do instrukcji, które są wykonywane w kodzie wielokrotnie stosujemy pętle, w języku Python mamy dwie pętle:
+- for - przetwarzającą elementy sekwencji
+- while - z testem na początku cyklu
+Pętla for służy do powtarzania bloku kodu przez określoną ilość razy lub dla każdego elementu w sekwencji. Jej zapis:
+for zmienna in sekwencja:
+	intrukcje_do_wykonania
+Gdzie:
+- zmienna to zmienna, która przechowuje pojedynczy element pobrany z sekwencji w kolejnych obiegach pętli
+- sekwencja to sekwencja, z której pobierane są kolejne wartości i wstawiane do zmiennej
+- intrukcje_do_wykonania to polecenia, które mają być powtórzone w każdym obiegu pętli
+Przykładowo mamy listę liczby, w której są zawarte pewne wartości. Zmienna liczba przyjmuje wartość kolejnych elementów z listy liczby. 
+Kod, który znajduje się wewnątrz pętli, zostanie wykonany dla każdego elementu listy. W rezultacie, kod wypisze nam liczby zawarte w liście.
+ 	 
+
+By wyświetlić dane w jednym wierszu, używamy parametru end.
+ 	 
+
+Gdy chcemy, aby dana sekwencja została wykonana określoną ilość razy, używamy funkcji range.
+ 	 
+	
+Jeśli używamy funkcji range (która generuje sekwencję liczb), zmienna, którą używamy w pętli for, działa jak licznik. 
+Za każdym razem, gdy pętla przechodzi przez cykl, licznik się zwiększa. Możemy korzystać z wartości tego licznika, aby dostosować to, co robimy w każdym kroku pętli, np.:
+- for x in range(10): print(x) wyświetli liczby rosnąco od 0 do 9
+- for x in range(1, 11): print(x) wyświetli liczby rosnąco od 1 do 10
+Pętle często wykorzystujemy do wyświetlenia danych w postaci tabelarycznej.
+ 	 
+
+Mamy tu tabelę, która wyświetla nam kwadrat oraz sześcian liczb od 2 do 8. Jednak kolumny nie są wyrównane. Aby określić szerokość poszczególnych pól, używamy napisów formatowanych poprzez podanie liczby spacji, jaką co najmniej ma zając dana wartość na ekranie. 
+ 	 
+
+Gdy oprócz wartości danego elementu, potrzebujemy również jego pozycję, używamy funkcji enumerate.
+ 
+ 
+
+Pętle for często łączymy z instrukcją if, aby operacje, które chcemy wykonać obejmowały tylko niektóre elementy. 
+Do instrukcji if możemy dołączyć również instrukcję continue służącą do pomijania wykonywania reszty pętli w pewnych warunkach. 
+Pętle, podobnie jak instrukcje warunkowe możemy zagnieżdżać 
+ 
+Pętle często służą do obliczania pewnej wartości ogólnej inaczej agregatu. 
+Zmienna, która reprezentuje agregat, musi zostać utworzona przed pętlą – w niej jest tylko aktualizowana wartość zmiennej. 
+
+Czasami jest potrzeba przerwania pętli. Możemy to zrobić wewnątrz pętli posługując się instrukcją break. 
+  
+Pętle w Pythonie mogą zawierać człon else, który zostanie wykonany po zakończeniu pętli, jeśli nie została ona przerwana instrukcją break. 
+ 
+Kiedy pętla nie jest powiązana z żadną sekwencją, a na dodatek nie wiemy jak często ma się powtarzać – korzystamy z pętli while do której dopisujemy warunek decydujący o tym, czy się powtarza. 
+ 
+ 
+Jeśli warunek pętli while będzie zawsze spełniony, pętla nigdy się nie skończy. Taki program można zakończyć po wymuszeniu przerwania kombinacją klawiszy CTRL+C.
+Gdy warunek w pętli while będzie nieprawdziwy – nie wykona się ona
+ Gdy zależy nam na tym by pętla wykona się co najmniej raz musimy ustawić warunek trwania na zawsze prawdziwy: True. 
+ Dalej, w środku pętli tworzymy warunek jej przerwania np.: podanie odpowiedniej wartości przez użytkownika.
+ 
+
+        </pre>
+        <p>
+          Sprawdź swoją wiedzę z zakresu struktur kontrolnych w Pythonie, odpowiadając na poniższe pytania.
+        </p>
+
+        <!-- Pytanie 1 -->
+        <h4>Pytanie 1: Jakie słowo kluczowe używane jest do rozpoczęcia warunku w Pythonie?</h4>
+        <input type="radio" id="q1a" name="q1" value="a"> a) for<br>
+        <input type="radio" id="q1b" name="q1" value="b"> b) if<br>
+
+        <!-- Pytanie 2 -->
+        <h4>Pytanie 2: Która pętla wykonuje się określoną ilość razy?</h4>
+        <input type="radio" id="q2a" name="q2" value="a"> a) for<br>
+        <input type="radio" id="q2b" name="q2" value="b"> b) while<br>
+
+        <!-- Pytanie 3 -->
+        <h4>Pytanie 3: Jakie słowo kluczowe używane jest do zakończenia pętli w Pythonie?</h4>
+        <input type="radio" id="q3a" name="q3" value="a"> a) break<br>
+        <input type="radio" id="q3b" name="q3" value="b"> b) stop<br>
+
+        <button onclick="checkAnswers()">Sprawdź</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Funkcja do sprawdzania odpowiedzi
+function checkAnswers() {
+  var correctAnswers = 0;
+
+  // Sprawdzenie odpowiedzi na pytanie 1
+  if (document.getElementById('q1b').checked) {
+    correctAnswers++;
+  }
+
+  // Sprawdzenie odpowiedzi na pytanie 2
+  if (document.getElementById('q2a').checked) {
+    correctAnswers++;
+  }
+
+  // Sprawdzenie odpowiedzi na pytanie 3
+  if (document.getElementById('q3a').checked) {
+    correctAnswers++;
+  }
+
+  // Wyświetlenie wyniku
+  document.getElementById("result").innerHTML = "Liczba poprawnych odpowiedzi: " + correctAnswers;
+}
+</script>
+
+<!-- Koniec sekcji quizu w Pythonie -->
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

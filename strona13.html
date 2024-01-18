@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Pierwsze Kroki w Pythonie: Instalacja i Konfiguracja</h2>
+      </div>
+      
+      <p>
+        <prE>
+        Aby rozpocząć swoją przygodę z pisaniem kodu w języku Python, potrzebne jest nam narzędzie do edycji oraz interpretacji kodu.
+        Możliwości mamy kilka:
+        - Referencyjny interpreter Pythona, który znajdziemy na oficjalnej stronie https://www.python.org. 
+        Pobieramy najnowszą dostępną wersję odpowiednią do naszego urządzenia.
+        <img src="zdj/obraz1.jpg">
+        Klikamy <i>Download Python 3.12.1</i> (na moment pisania kursu). Zostaniemy przeniesieni na stronę opisującą daną wersję. 
+        Na dole strony znajduje się nagłówek <i>Files</i> a pod nim tabela z różnymi dostępnymi wersjami – wybieramy odpowiednią do naszego systemu.
+        (w tym przypadku Windows installer 64-bit)
+        <img src="zdj/obraz2.jpg">
+        Otwieramy pobrany plik i przechodzimy przez proces instalacji.
+        - Opracowane dla języka Python PyCharm narzędzie programistyczne. Po wybraniu opcji Download ukaże nam się najpierw wersja Professional – dla developerów, 
+        którą pomijamy, a pod nią Community Edition – idealną do nauki.
+        <img src="zdj/obraz3.jpg">
+        - Uniwersalne narzędzie programistyczne obsługujące język Python poprzez dodatki np.: Eclipse PyDev czy Visual Studio. 
+        Podczas korzystania z tego drugiego, również wybieramy wersję Community.
+        Po ukończonym procesie instalacji w menu Start powinniśmy ujrzeć nowo dodane elementy. Aby rozpocząć programowanie w Python, wybieramy pierwszy – IDLE.
+        <img src="zdj/obraz4.jpg">
+        <img src="zdj/obraz5.jpg">
+        </prE>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Podstawy responsywnego projektowania stron</h2>
+      </div>
+      
+      <p>
+        <p>W dzisiejszym świecie, w którym użytkownicy korzystają z różnych urządzeń do przeglądania internetu, responsywne projektowanie stron staje się nieodzownym elementem. O co chodzi z tym pojęciem i jak można dostosować swoją stronę do różnych rozmiarów ekranów? Oto krótka podróż przez podstawy responsywnego projektowania stron.</p>
+
+        <h2>Co To Jest Responsywne Projektowanie Stron?</h2>
+    
+        <p>Responsywne projektowanie stron to podejście do tworzenia witryn internetowych, które dostosowuje się do różnych urządzeń, takich jak komputery, tablety i smartfony. Celem jest zapewnienie optymalnego doświadczenia użytkownika bez względu na to, jakie urządzenie używa do przeglądania strony.</p>
+    
+        <h2>1. Media Queries</h2>
+    
+        <p>Media queries w CSS pozwalają na dostosowywanie stylów w zależności od warunków, takich jak szerokość ekranu. Poniżej znajduje się przykład:</p>
+    
+        <pre><code>
+    @media screen and (max-width: 768px) {
+        /* Styl dla ekranów o szerokości do 768px */
+    }
+        </code></pre>
+    
+        <h2>2. Flexbox i Grid Layout</h2>
+    
+        <p>Flexbox i Grid Layout to technologie ułatwiające układanie elementów na stronie. Flexbox jest idealny do zarządzania rozkładem elementów w jednym wymiarze, a Grid Layout pozwala na bardziej zaawansowane układy dwuwymiarowe. Poniżej znajdują się przykłady:</p>
+    
+        <pre><code>
+    /* Flexbox */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Grid Layout */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+        </code></pre>
+    
+        <h2>3. Obrazki i Multimedia</h2>
+    
+        <p>Responsywne obrazki są kluczowe dla projektowania responsywnego. Używaj atrybutu <code>max-width: 100%</code> dla obrazków, aby zapewnić, że zmieszczą się na różnych urządzeniach:</p>
+    
+        <pre><code>
+    /* Responsywne obrazki */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+        </code></pre>
+    
+        <p>Responsywne projektowanie stron to kluczowy element w tworzeniu nowoczesnych i dostępnych witryn internetowych. Zastosowanie powyższych podstaw pozwoli Ci na stworzenie strony, która będzie doskonale działała na różnych urządzeniach, zyskując zadowolenie odwiedzających.</p>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

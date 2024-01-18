@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">HTML i CSS dla początkujących: Tworzenie prostych stron internetowych</h2>
+      </div>
+      
+      <p>
+        Czy kiedykolwiek zastanawiałeś się, jak są tworzone strony internetowe, które codziennie przeglądasz? Czy chciałbyś nauczyć się podstawowych umiejętności programowania, aby móc stworzyć własną stronę internetową? W takim razie HTML i CSS są idealnymi narzędziami dla Ciebie! W tym artykule przyjrzymy się tym dwóm językom programowania, które stanowią fundament większości stron internetowych, oraz pokażemy, jak zacząć tworzyć proste strony od podstaw.
+
+HTML - Język Struktury
+HTML, czyli HyperText Markup Language, to język używany do strukturyzowania i organizowania zawartości stron internetowych. Jego podstawowym zadaniem jest definiowanie różnych elementów na stronie, takich jak nagłówki, paragrafy, obrazy, linki itp. Poniżej znajduje się prosty przykład struktury HTML:
+      </p>
+      <p>
+          <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="pl"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Moja Pierwsza Strona&lt;/title&gt;
+                &lt;link rel="stylesheet" href="style.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;header&gt;
+                    &lt;h1&gt;Witaj na mojej stronie!&lt;/h1&gt;
+                &lt;/header&gt;
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Strona Główna&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;O Nas&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+                &lt;section&gt;
+                    &lt;h2&gt;O Nas&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit....&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;footer&gt;
+                    &lt;p&gt;&amp;copy; 2024 Moja Strona Internetowa&lt;/p&gt;
+                &lt;/footer&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+      </p>
+      <p>
+        W powyższym przykładzie zdefiniowano strukturę podstawowej strony internetowej, obejmującą nagłówek, nawigację, sekcję treści i stopkę. Elementy te są zagnieżdżone w odpowiednich tagach HTML, co nadaje strukturę i znaczenie każdemu fragmentowi.
+
+CSS - Stylowanie Strony
+CSS, czyli Cascading Style Sheets, to język używany do nadawania stylów i układu stronom internetowym. Pozwala on kontrolować wygląd elementów zdefiniowanych w HTML. Poniżej znajduje się prosty przykład pliku CSS, który nadaje styl wcześniej zdefiniowanym elementom:
+      </p>
+      <p>
+        <pre>
+          body {
+              font-family: 'Arial', sans-serif;
+              margin: 0;
+              padding: 0;
+          }
+  
+          header {
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              padding: 1em;
+          }
+      </pre>
+      </p>
+      <p>
+        W powyższym przykładzie zdefiniowano style dla różnych sekcji strony, takie jak tło nagłówka, kolor czcionki, marginesy, itp. Plik CSS ten można podłączyć do strony HTML, jak pokazano w pierwszym przykładzie, za pomocą linku w sekcji <head>.
+
+          Rozwijanie Umiejętności
+          To tylko początek podróży w świat tworzenia stron internetowych przy użyciu HTML i CSS. Istnieje wiele źródeł online, kursów i samouczków, które pomogą Ci zgłębić tajniki tych języków programowania. Pamiętaj, że praktyka to klucz do opanowania tych umiejętności, więc eksperymentuj, twórz własne projekty i nie bój się zadawać pytań społeczności programistycznej. Wkrótce zdasz sobie sprawę, że tworzenie stron internetowych to nie tylko nauka, ale również fascynująca przygoda w świecie kodowania!
+      </p>
+
+      <!-- Dodaj sekcję gry -->
+      <div id="gameSection">
+        <h3>Ustaw elementy w odpowiedniej kolejności, aby poprawnie załączyć arkusz stylu do strony internetowej:</h3>
+        <ul id="sortable">
+          <li class="ui-state-default"><</li>
+          <li class="ui-state-default">Link</li>
+          <li class="ui-state-default">rel=stylesheet</li>
+          <li class="ui-state-default">href=style.css</li>
+          <li class="ui-state-default">></li>
+
+        </ul>
+        <button id="checkButton" onclick="checkOrder()">Sprawdź</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $(document).ready(function () {
+    // Losowo mieszaj elementy
+    var ul = $("#sortable");
+    var liArr = ul.children('li');
+    liArr.sort(function () {
+      return Math.random() - 0.5;
+    });
+    ul.empty();
+    ul.append(liArr);
+    
+    // Inicjalizacja sortowalnej listy
+    $("#sortable").sortable();
+  });
+
+  function checkOrder() {
+    // Pobierz elementy posortowane
+    var sortedItems = $("#sortable li").map(function () {
+      return $(this).text();
+    }).get();
+
+    // Sprawdź poprawność odpowiedzi
+    var correctOrder = ["<", "Link", "rel=stylesheet", "href=style.css",">"];
+    if (JSON.stringify(sortedItems) === JSON.stringify(correctOrder)) {
+      $("#result").text("Brawo!");
+      $("#result").css("color", "green");
+    } else {
+      $("#result").text("Spróbuj jeszcze raz");
+      $("#result").css("color", "red");
+    }
+  }
+</script>
+
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

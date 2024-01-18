@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Add your Userbase SDK script here -->
+  <script type="text/javascript" src="https://sdk.userbase.com/2/userbase.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <div class="jumbotron text-center center-text" style="background-color: babyblue; color: white;">
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="GitKodowanie.html">STRONA GŁÓWNA</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="auth-view" class="container-fluid bg-light">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">Login</h1>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-username">Nazwa:</label>
+            <input id="login-username" type="text" class="form-control" required placeholder="Login">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Hasło:</label>
+            <input id="login-password" type="password" class="form-control" required placeholder="Hasło">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Zaloguj</button>
+        </form>
+        <div id="login-error" class="text-danger mt-3"></div>
+  
+        <h1 class="text-center mt-4">Stwórz konto</h1>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-username">Nazwa:</label>
+            <input id="signup-username" type="text" class="form-control" required placeholder="Login">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Hasło:</label>
+            <input id="signup-password" type="password" class="form-control" required placeholder="Hasło">
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Stwórz konto</button>
+        </form>
+        <div id="signup-error" class="text-danger mt-3"></div>
+      </div>
+    </div>
+  </div>
+  
+<div id="home" class="container-fluid">
+  <!-- Home Section content -->
+</div>
+
+
+<section id="nauka" class="container-fluid">
+  <!-- Nauka Section content -->
+</section>
+
+<div id="todo-view">
+  <!-- To-dos View content -->
+</div>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // Assuming you have the userbase object defined or imported
+    userbase.init({ appId: 'd9373a78-db7b-4396-b05c-bb2733c567c2' }) //tu zmienić
+      .then((session) => {
+        if (session.user) {
+          // Redirect to the desired page after successful login
+          window.location.href = 'dodatkowe.html';
+        } else {
+          showAuth();
+        }
+      })
+      .catch(() => showAuth())
+      .finally(() => document.getElementById('loading-view').style.display = 'none');
+
+    function handleLogin(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+
+      userbase.signIn({ username, password, rememberMe: 'local' })
+        .then((user) => {
+          // Redirect to the desired page after successful login
+          window.location.href = 'dodatkowe.html';
+        })
+        .catch((e) => document.getElementById('login-error').innerHTML = e);
+    }
+
+    function handleSignUp(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('signup-username').value;
+      const password = document.getElementById('signup-password').value;
+
+      userbase.signUp({ username, password, rememberMe: 'local' })
+        .then((user) => {
+          // Redirect to the desired page after successful signup
+          window.location.href = 'dodatkowe.html';
+        })
+        .catch((e) => document.getElementById('signup-error').innerHTML = e);
+    }
+
+    function showAuth() {
+      document.getElementById('todo-view').style.display = 'none';
+      document.getElementById('auth-view').style.display = 'block';
+      document.getElementById('login-username').value = '';
+      document.getElementById('login-password').value = '';
+      document.getElementById('login-error').innerText = '';
+
+      document.getElementById('signup-username').value = '';
+      document.getElementById('signup-password').value = '';
+      document.getElementById('signup-error').innerText = '';
+    }
+
+    document.getElementById('login-form').addEventListener('submit', handleLogin);
+    document.getElementById('signup-form').addEventListener('submit', handleSignUp);
+
+    document.getElementById('todo-view').style.display = 'none';
+    document.getElementById('auth-view').style.display = 'none';
+  });
+</script>
+</body>
+</html>

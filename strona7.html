@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Zmienne i Typy Danych w C++</h2>
+      </div>
+      
+      <p>
+        <b>Zmienna</b> to miejsce w pamięci, w którym można przechowywać dane.<br> <b>Typ danych</b> określa, jaki rodzaj danych może być przechowywany w zmiennej.<br>
+W C++ istnieją dwa główne typy danych:<br>
+<li>Typy proste przechowują pojedyncze wartości, takie jak liczby, tekst lub znaki.</li><br>
+<li>Typy złożone przechowują grupy danych, takie jak tablice lub obiekty.</li><br>
+
+<b>Typy proste</b><br>
+Do typów prostych należą:
+Liczby całkowite reprezentują liczby całkowite, takie jak 1, 2, 3, itd.
+<pre>
+
+<span style="background-color: lightgray;">C++</span>
+int a = 10;
+
+</pre>
+
+<b>Liczby zmiennoprzecinkowe</b> reprezentują liczby z ułamkami, takie jak 1.23, 3.14, itd.
+<pre>
+<span style="background-color: lightgray;">C++</span>
+float b = 1.23;
+double c = 3.14;
+</pre>
+<b>Znaki</b> reprezentują pojedyncze znaki, takie jak 'a', 'b', 'c', itd.
+<pre>
+<span style="background-color: lightgray;">C++</span>
+char d = 'a';
+</pre>
+<b>Tekst</b> reprezentuje ciąg znaków, taki jak "Ala ma kota".
+<pre>
+<span style="background-color: lightgray;">C++</span>
+std::string e = "Ala ma kota";
+</pre>
+<b>Typy złożone</b><br>
+Do typów złożonych należą:<br>
+<li>Tablice przechowują wiele wartości tego samego typu w jednej zmiennej.</li>
+<pre>
+<span style="background-color: lightgray;">C++</span>
+int tablica[5];
+</pre>
+<b>Obiekty</b> przechowują dane i funkcje w jednej strukturze.
+<pre>
+<span style="background-color: lightgray;">C++</span>
+class Osoba {
+
+  public:
+    std::string imie;
+    std::string nazwisko;
+
+    void przedstawSie() {
+      std::cout << "Mam na imię " << imie << " " << nazwisko << std::endl;
+    }
+};
+
+int main() {
+  Osoba osoba;
+  osoba.imie = "Jan";
+  osoba.nazwisko = "Kowalski";
+  osoba.przedstawSie();
+  return 0;
+}
+</pre>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

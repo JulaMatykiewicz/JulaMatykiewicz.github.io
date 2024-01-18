@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <p>
+        Program w C++ składa się z następujących elementów:<br>
+        Klasa główna to punkt wejścia do programu. Zawiera ona funkcję <b>main()</b>, która jest wykonywana jako pierwsza.<br>
+        <pre>
+        <span style="background-color: lightgray;">C++</span>
+        #include &lt;iostream&gt;
+
+        int main() {
+          // ...
+          return 0;
+        }
+      </pre>
+
+
+        <b>Funkcje</b> to bloki kodu, które mogą być wywoływane z innych części programu.
+        <pre>
+          <span style="background-color: lightgray;">C++</span>
+        void funkcja(int a, int b) {
+          // ...
+        }
+        int main() {
+          // ...
+          funkcja(10, 20);
+          return 0;
+        }
+      </pre>
+        Instrukcje to podstawowe jednostki kodu, które wykonują określoną akcję.
+        <pre>
+          <span style="background-color: lightgray;">C++</span>
+        int main() {
+          // ...
+          int a = 10;
+          int b = 20;
+          // Dodawanie dwóch liczb
+          int suma = a + b;
+          // Wyświetlenie wyniku
+          std::cout << "Suma wynosi: " << suma << std::endl;
+        return 0;
+        }
+      </pre>
+</p>
+        <h2 style="margin-bottom: 20px;">Zadanie w C++: Zamiana Wartości</h2>
+        <p>
+          Zastanów się i podaj wartości zmiennych <strong>x</strong> i <strong>y</strong> po wykonaniu poniższego kodu C++:
+        </p>
+        
+        <pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main() {
+    int x = 5;
+    int y = 3;
+    
+    x = x + y;
+    y = x - y;
+    x = x - y;
+
+    std::cout &lt;&lt; "Wartość x: " &lt;&lt; x &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Wartość y: " &lt;&lt; y &lt;&lt; std::endl;
+
+    return 0;
+}</code></pre>
+
+        <!-- Pola do odpowiedzi -->
+        <label for="answer_x">Wartość x:</label>
+        <input type="text" id="answer_x" name="answer_x">
+
+        <label for="answer_y">Wartość y:</label>
+        <input type="text" id="answer_y" name="answer_y">
+        <!-- Koniec pól do odpowiedzi -->
+
+        <button onclick="checkAnswers()">Sprawdź</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Funkcja do sprawdzania odpowiedzi
+function checkAnswers() {
+  var userAnswerX = document.getElementById("answer_x").value;
+  var userAnswerY = document.getElementById("answer_y").value;
+
+  var correctAnswerX = 3; // Wartość oczekiwana dla x
+  var correctAnswerY = 5; // Wartość oczekiwana dla y
+
+  if (userAnswerX == correctAnswerX && userAnswerY == correctAnswerY) {
+    document.getElementById("result").innerHTML = "Brawo! Odpowiedzi są poprawne.";
+    document.getElementById("result").style.color = "green";
+  } else {
+    document.getElementById("result").innerHTML = "Spróbuj jeszcze raz. Odpowiedzi są niepoprawne.";
+    document.getElementById("result").style.color = "red";
+  }
+}
+</script>
+
+<!-- Koniec sekcji gry C++ -->
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>

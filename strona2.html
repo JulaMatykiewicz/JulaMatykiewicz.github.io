@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Git Kodowanie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center" style="background-color: babyblue; color: white;">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: babyblue;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="GitKodowanie.html">POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Home Section) -->
+<div id="test" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 order-md-2 d-flex align-items-center">
+      <div class="text-center my-auto">
+        <h2 style="margin-bottom: 20px;">Zaawansowane techniki w CSS: Jak nadać swojej stronie profesjonalny wygląd?</h2>
+      </div>
+      
+      <p>
+        <p>Stworzenie profesjonalnie wyglądającej strony internetowej to sztuka, w której kluczową rolę odgrywa CSS, czyli Cascading Style Sheets. CSS pozwala na nadanie stylów, układu i wyglądu elementów HTML, dzięki czemu strona staje się atrakcyjna i intuicyjna dla użytkowników. W tym artykule przejrzymy zaawansowane techniki w CSS, które pomogą Ci podnieść poziom estetyki i funkcjonalności Twojej witryny.</p>
+
+    <h2>1. Responsive Design (Projektowanie RWD)</h2>
+    Responsywność strony to kluczowy element w dzisiejszym świecie internetu. Dzięki projektowaniu responsywnemu, strona dostosowuje się do różnych rozmiarów ekranów, zapewniając optymalne doświadczenie użytkownika zarówno na komputerach, tabletach, jak i smartfonach. Wykorzystaj media queries w CSS, aby dostosować układ i styl w zależności od szerokości ekranu.
+    <pre><code>
+@media screen and (max-width: 768px) {
+    /* Styl dla ekranów o szerokości do 768px */
+    /* Przykładowe zmiany stylu dla responsywności */
+}
+    </code></pre>
+
+    <h2>2. Animacje i Transition</h2>
+    
+Zaawansowane Techniki w CSS: Jak nadać swojej stronie profesjonalny wygląd?
+Stworzenie profesjonalnie wyglądającej strony internetowej to sztuka, w której kluczową rolę odgrywa CSS, czyli Cascading Style Sheets. CSS pozwala na nadanie stylów, układu i wyglądu elementów HTML, dzięki czemu strona staje się atrakcyjna i intuicyjna dla użytkowników. W tym artykule przejrzymy zaawansowane techniki w CSS, które pomogą Ci podnieść poziom estetyki i funkcjonalności Twojej witryny.
+
+1. Responsive Design (Projektowanie RWD)
+Responsywność strony to kluczowy element w dzisiejszym świecie internetu. Dzięki projektowaniu responsywnemu, strona dostosowuje się do różnych rozmiarów ekranów, zapewniając optymalne doświadczenie użytkownika zarówno na komputerach, tabletach, jak i smartfonach. Wykorzystaj media queries w CSS, aby dostosować układ i styl w zależności od szerokości ekranu.
+
+css
+Copy code
+@media screen and (max-width: 768px) {
+    /* Styl dla ekranów o szerokości do 768px */
+    /* Przykładowe zmiany stylu dla responsywności */
+}
+2. Animacje i Transition
+Dodawanie animacji i efektów przejścia może sprawić, że Twoja strona stanie się bardziej dynamiczna i atrakcyjna dla użytkowników. CSS oferuje właściwości takie jak transition czy animation, które umożliwiają płynne przejścia między stanami elementów.
+
+    <pre><code>
+/* Przykład animacji: */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Stosowanie animacji: */
+.element {
+    animation: fadeIn 1s ease-in-out;
+}
+    </code></pre>
+
+    <h2>3. Flexbox i Grid Layout</h2>
+    Flexbox i Grid Layout to potężne narzędzia w CSS, które ułatwiają układanie elementów na stronie. Flexbox jest idealny do zarządzania rozkładem elementów w jednym wymiarze (w rzędzie lub kolumnie), natomiast Grid Layout umożliwia bardziej zaawansowane układy dwuwymiarowe.
+
+    <pre><code>
+/* Flexbox */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+    </code></pre>
+
+    <h2>4. Pseudoklasy i Pseudoelementy</h2>
+    Pseudoklasy i pseudoelementy w CSS pozwalają na precyzyjne stylowanie elementów w zależności od ich stanu lub roli. Na przykład, :hover pozwala określić styl, który ma być zastosowany, gdy użytkownik najedzie kursorem na element.
+
+    <pre><code>
+/* Pseudoklasa :hover */
+.button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Pseudoelement ::before */
+.element::before {
+    content: "\2022"; /* Znak kropki */
+    margin-right: 5px;
+}
+    </code></pre>
+
+    <h2>5. Zaawansowane Efekty Cienia i Gradientów</h2>
+    Dodawanie cieni i gradientów to świetny sposób na nadanie głębi i trójwymiarowości elementom strony. CSS umożliwia precyzyjne dostosowywanie tych efektów.
+
+    <pre><code>
+/* Cień */
+.box {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient */
+.header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+    </code></pre>
+
+    <p>Zaawansowane techniki w CSS pozwalają na tworzenie stron o wysokim standardzie wizualnym i funkcjonalnym. Eksperymentuj z różnymi właściwościami CSS, dostosowuj styl do potrzeb projektu, a Twoja strona zyska nowoczesny i profesjonalny wygląd. Pamiętaj, że umiejętne łączenie różnych technik może przynieść najbardziej imponujące rezultaty.</p>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > navbar.offsetHeight);
+        });
+    });
+</script>
+<footer class="navbar fixed-bottom" style="background-color: #3498db; color: white; text-align: center; padding: 10px;">
+  <p>Portal jest własnością Grupy Z1</p>
+  <p>Julia Matykiewicz & Jakub Robaszewski</p>
+</footer>
+</body>
+</html>
